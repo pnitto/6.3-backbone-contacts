@@ -8,27 +8,26 @@ var Contact = Backbone.Model.extend({
       linkedinUsername: "",
     };
   },
-/*
-  validate: {
+  validation: {
     email: {
       required: true,
       pattern: 'email',
       msg: 'Please enter a valid email',
     },
     name: {
-      required: true,
+      required: true
     },
     phoneNumber: {
       required: true,
+      pattern: 'digits',
     },
     twitterUsername: {
-      required: false,
+      required: false
     },
     linkedinUsername: {
-      required: false,
+      required: false
     }
   }
-*/
 });
 
 

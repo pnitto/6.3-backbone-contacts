@@ -41,6 +41,8 @@ body {
 }
 .submit-btn {
   margin-top: 5%;
+  margin-left: 42%;
+  width: 175px;
 }
 .input-box {
   margin-top: 5%;
@@ -50,4 +52,9 @@ label {
   display: inline-block;
   text-align: right;
   width: 200px;
+}
+.li {
+  border: 2px solid black;
+  width: 300px;
+  margin-bottom: 3%;
 }

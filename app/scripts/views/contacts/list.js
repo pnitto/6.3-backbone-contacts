@@ -13,9 +13,8 @@ var ContactListView = Backbone.View.extend({
     'add': 'contactsAdd'
   },
   contactsAdd: function(){
-    $('#container').html(this.render().el)
-  }
-
-})
+    $('#container').html(this.render().el);
+  },
+});
 
 module.exports = ContactListView;
