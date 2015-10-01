@@ -19,8 +19,12 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
 }
+
+
 .contact-form {
-  width: 400px;
+  width: 500px;
+  margin-left: 30%;
+  margin-top: 3%;
 }
 .contact-container {
   width: 300px;
@@ -28,4 +32,22 @@ body {
   height: 200px;
   margin-left: 20%;
   margin-top: 10%;
+}
+
+.contact-list {
+  margin-left: 40%;
+  margin-top: 5%;
+  list-style-type: none;
+}
+.submit-btn {
+  margin-top: 5%;
+}
+.input-box {
+  margin-top: 5%;
+  margin-left: 2%;
+}
+label {
+  display: inline-block;
+  text-align: right;
+  width: 200px;
 }

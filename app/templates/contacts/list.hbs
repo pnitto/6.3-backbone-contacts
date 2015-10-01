@@ -1,3 +1,11 @@
-  <ul class="list-contact">
-    
-  </ul>
+
+<h1>Contact List</h1>
+{{#each this}}
+<li>
+  <h3>Email: {{email}}</h3>
+  <h3>Name: {{name}}</h3>
+  <h3>Phone Number: {{phoneNumber}}</h3>
+  <h3>Twitter Username: {{twitterUsername}}</h3>
+  <h3>Linkedin Username: {{linkedinUsername}}</h3>
+</li>
+{{/each}}

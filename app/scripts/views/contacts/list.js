@@ -1,30 +1,21 @@
-var ListContact = Backbone.View.extend({
-  tagName: 'ul',
-  className: 'list-contact',
+var ContactCollection = require('models/contact-collection');
+
+var ContactListView = Backbone.View.extend({
+  tagname: 'ul',
+  className: 'contact-list',
   template: JST['contacts/list'],
-  events: {
-    'submit':'ListContact'
-  },
+
   render: function(){
-    this.$el.html(this.template());
-    console.log(this);
+    this.$el.html(this.template(this.collection.toJSON()));
     return this;
   },
-  ListContact: function(e){
-    e.preventDefault();
-    console.log(this);
-    App.contacts.on('sync', function(){
-      App.contacts.fetch(this.serialize());
-  });
-},
-  serialize: function(){
-    var result = {};
-    console.log(result);
-    var input = this.$el.serializeArray();
-    input.forEach(function(input){
-        result[input.name] = input.value;
-    });
-    return result;
+  events: {
+    'add': 'contactsAdd'
+  },
+  contactsAdd: function(){
+    $('#container').html(this.render().el)
   }
-});
-module.exports = ListContact;
+
+})
+
+module.exports = ContactListView;
